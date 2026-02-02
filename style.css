@@ -1,0 +1,112 @@
+/* General Setup */
+html { scroll-behavior: smooth; }
+body { margin: 0; font-family: 'Poppins', sans-serif; overflow-x: hidden; }
+
+/* Utilities */
+.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+.highlight { color: #007bff; }
+.btn {
+    display: inline-block;
+    padding: 10px 25px;
+    background: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    margin-top: 20px;
+    transition: transform 0.3s;
+}
+.btn:hover { transform: scale(1.05); }
+
+/* --- HERO SECTION --- */
+.hero {
+    height: 100vh;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.hero h2 { font-size: 3rem; margin: 0; }
+.typing-text { font-size: 1.5rem; color: #555; height: 30px; }
+
+/* --- ANIMATION CLASSES (Used by JS) --- */
+.hidden {
+    opacity: 0;
+    transform: translateY(50px); /* Pushes element down */
+    transition: all 1s ease; /* Smooth transition when class is removed */
+}
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* --- PROJECTS: HOVER POPUP EFFECT --- */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.project-card {
+    position: relative;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    height: 300px; /* Fixed height for consistency */
+}
+
+.card-image {
+    height: 60%;
+    width: 100%;
+}
+
+.placeholder-img {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.card-content {
+    padding: 20px;
+    height: 40%;
+}
+
+/* THE POPUP MAGIC */
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 123, 255, 0.95); /* Blue overlay */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0; /* Hidden by default */
+    transition: opacity 0.4s ease;
+    padding: 20px;
+    text-align: center;
+}
+
+/* When you hover over the card, show the overlay */
+.project-card:hover .card-overlay {
+    opacity: 1;
+}
+
+/* Sections */
+.section { padding: 80px 0; }
+.bg-light { background: #f9f9f9; }
+.skills span {
+    background: #333; color: #fff; padding: 5px 10px;
+    border-radius: 5px; font-size: 0.9rem; margin-right: 5px;
+}
+footer { text-align: center; padding: 20px; background: #222; color: #fff; }
