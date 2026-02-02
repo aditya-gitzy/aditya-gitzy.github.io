@@ -3,124 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    
+    <meta name="description" content="Portfolio of a Computer Engineering Student at DBIT Mumbai. Unity Developer, C Programmer, and System Engineer.">
+    <meta name="keywords" content="Aditya, DBIT, Portfolio, Computer Engineer, Unity, Game Dev">
+    <meta name="author" content="Aditya">
+    
+    <title>Aditya | Game & System Developer</title>
+    
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <header>
-        <div class="container">
-            <h1 class="logo">DevPortfolio.</h1>
-            <nav>
-                <ul>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
+    <nav class="navbar">
+        <div class="logo">Aditya<span class="dot">.</span></div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Tech Stack</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact" class="btn-contact">Contact Me</a></li>
+        </ul>
+    </nav>
 
     <section class="hero">
-        <div class="hero-content">
-            <h2>Hello, I'm <span class="highlight">Name</span></h2>
-            <h3 class="typing-text">I am a <span id="typewriter"></span></h3>
-            <p class="fade-in">Computer Engineering Student @ DBIT Mumbai</p>
-            <a href="#projects" class="btn fade-in">View My Projects</a>
+        <div class="hero-text">
+            <p class="greeting">Hi, my name is</p>
+            <h1>Aditya.</h1>
+            <h2 class="subtitle">I build worlds with Code.</h2>
+            <p class="bio">
+                Computer Engineering Student at <strong>DBIT Mumbai</strong>. 
+                Specializing in <span class="highlight">Game Development (Unity)</span> and <span class="highlight">System Programming (C)</span>.
+            </p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn primary">Check my Work</a>
+                <a href="https://github.com/aditya-gitzy" target="_blank" class="btn secondary"><i class="fab fa-github"></i> GitHub</a>
+            </div>
+        </div>
+        <div class="hero-img">
+            <img src="my-photo.jpg" alt="Aditya Profile">
+            <div class="img-border"></div>
         </div>
     </section>
 
-    <section id="about" class="section">
-        <div class="container about-container hidden">
-            <div class="img-wrapper">
-                <img src="my-photo.jpg" alt="Profile Photo" class="profile-img">
+    <section id="skills" class="section">
+        <h2 class="section-heading"><span class="num">01.</span> My Tech Stack</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <i class="fa-brands fa-unity"></i>
+                <h3>Unity Engine</h3>
+                <p>2D/3D Game Dev</p>
             </div>
-            <div class="about-text">
-                <h2>About Me</h2>
-                <p>I am a first-year engineering student passionate about <strong>Game Dev</strong> and <strong>System Programming</strong>. I love turning math problems into code.</p>
-                <div class="skills">
-                    <span>C Programming</span>
-                    <span>Unity Engine</span>
-                    <span>Engineering Math</span>
-                </div>
+            <div class="skill-card">
+                <i class="fa-solid fa-c"></i>
+                <h3>C Programming</h3>
+                <p>System Logic</p>
             </div>
-        </div>
-    </section>
-
-    <section id="projects" class="section bg-light">
-        <div class="container">
-            <h2 class="section-title hidden">My Projects</h2>
-            <div class="projects-grid">
-                
-                <div class="project-card hidden">
-                    <div class="card-image">
-                        <div class="placeholder-img" style="background:#ff6b6b;">CrowdSense</div>
-                    </div>
-                    <div class="card-content">
-                        <h3>CrowdSense App</h3>
-                        <p>Managing rush in Mumbai local trains.</p>
-                        <a href="#" class="read-more">View Details</a>
-                    </div>
-                    <div class="card-overlay">
-                        <h3>Tech Stack</h3>
-                        <p>App Prototyping • UI/UX</p>
-                        <p>Calculates rush density based on real-time data.</p>
-                    </div>
-                </div>
-
-                <div class="project-card hidden">
-                    <div class="card-image">
-                        <div class="placeholder-img" style="background:#4ecdc4;">Flappy Bird</div>
-                    </div>
-                    <div class="card-content">
-                        <h3>Flappy Bird Clone</h3>
-                        <p>Physics-based 2D game in Unity.</p>
-                        <a href="#" class="read-more">View Details</a>
-                    </div>
-                    <div class="card-overlay">
-                        <h3>Tech Stack</h3>
-                        <p>Unity • C# • Physics Engine</p>
-                        <p>Custom assets and scripting for collision detection.</p>
-                    </div>
-                </div>
-
-                <div class="project-card hidden">
-                    <div class="card-image">
-                        <div class="placeholder-img" style="background:#ffe66d;">Mark Sheet</div>
-                    </div>
-                    <div class="card-content">
-                        <h3>Mark Sheet System</h3>
-                        <p>Automated grading system in C.</p>
-                        <a href="#" class="read-more">View Details</a>
-                    </div>
-                    <div class="card-overlay">
-                        <h3>Tech Stack</h3>
-                        <p>C Language • File Handling</p>
-                        <p>Generates student performance reports automatically.</p>
-                    </div>
-                </div>
-
+            <div class="skill-card">
+                <i class="fa-solid fa-calculator"></i>
+                <h3>Engineering Math</h3>
+                <p>Complex Algorithms</p>
+            </div>
+            <div class="skill-card">
+                <i class="fa-brands fa-html5"></i>
+                <h3>Web Dev</h3>
+                <p>HTML & CSS</p>
             </div>
         </div>
     </section>
 
-    <section id="contact" class="section">
-        <div class="container hidden">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="social-links">
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-github"></i></a>
-                <a href="#"><i class="fas fa-envelope"></i></a>
+    <section id="projects" class="section">
+        <h2 class="section-heading"><span class="num">02.</span> What I've Built</h2>
+        <div class="project-container">
+            
+            <div class="project-card">
+                <div class="project-content">
+                    <p class="project-overline">Mobile Prototype</p>
+                    <h3 class="project-title">CrowdSense App</h3>
+                    <div class="project-desc">
+                        <p>A smart system designed to monitor and manage rush in Mumbai local trains, helping commuters plan safer journeys.</p>
+                    </div>
+                    <ul class="project-tech-list">
+                        <li>UI Design</li>
+                        <li>Prototyping</li>
+                        <li>Logic</li>
+                    </ul>
+                </div>
             </div>
+
+            <div class="project-card">
+                <div class="project-content">
+                    <p class="project-overline">Unity Game</p>
+                    <h3 class="project-title">Flappy Bird Clone</h3>
+                    <div class="project-desc">
+                        <p>A physics-based 2D game built in Unity. Features custom C# scripting for gravity, collision detection, and score tracking.</p>
+                    </div>
+                    <ul class="project-tech-list">
+                        <li>Unity Engine</li>
+                        <li>C#</li>
+                        <li>Game Physics</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="project-card">
+                <div class="project-content">
+                    <p class="project-overline">System Tool</p>
+                    <h3 class="project-title">Mark Sheet Generator</h3>
+                    <div class="project-desc">
+                        <p>An automation tool written in C that processes student data and generates formatted mark sheets instantly.</p>
+                    </div>
+                    <ul class="project-tech-list">
+                        <li>C Language</li>
+                        <li>File Handling</li>
+                        <li>Algorithms</li>
+                    </ul>
+                </div>
+            </div>
+
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2026. Made with code.</p>
+    <footer id="contact">
+        <h3>Let's Connect</h3>
+        <p>I am currently looking for internships and new opportunities.</p>
+        <a href="mailto:your-email@gmail.com" class="btn primary">Say Hello</a>
+        <div class="socials">
+            <a href="#"><i class="fab fa-github"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+        </div>
+        <p class="copyright">Designed & Built by Aditya.</p>
     </footer>
 
     <script src="script.js"></script>
-
 </body>
 </html>
