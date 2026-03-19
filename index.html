@@ -12,14 +12,13 @@
     
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <nav class="navbar">
         <div class="logo">Aditya<span class="dot">.</span></div>
         <ul class="nav-links">
-            <li><a href="#about">About</a></li>
             <li><a href="#experience">Experience</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#hackathons">Hackathons</a></li>
@@ -27,8 +26,8 @@
         </ul>
     </nav>
 
-    <section class="hero">
-        <div class="hero-text">
+    <section class="hero hidden">
+        <div class="bg-shape"></div> <div class="hero-text">
             <p class="greeting">Hi, my name is</p>
             <h1>Aditya.</h1>
             <h2 class="subtitle">I build worlds with Code.</h2>
@@ -42,12 +41,11 @@
             </div>
         </div>
         <div class="hero-img">
-            <img src="my-photo.jpg" alt="Aditya Profile">
-            <div class="img-border"></div>
+            <img src="my-photo.jpg" alt="Aditya Profile" class="profile-circle">
         </div>
     </section>
 
-    <section id="experience" class="section">
+    <section id="experience" class="section bg-alt hidden">
         <h2 class="section-heading"><span class="num">01.</span> Experience</h2>
         <div class="timeline">
             
@@ -57,8 +55,7 @@
                     <span class="company">JPMorgan Chase & Co.</span>
                     <span class="date">Jan 2026</span>
                     <p>Completed practical tasks involving credit risk analysis and commodity storage pricing. Used Python and statistics to bucket FICO scores and predict loan defaults.</p>
-                    
-                    <a href="jpm.pdf" target="_blank" style="display: inline-block; margin-top: 10px; color: #64ffda; font-weight: bold; font-size: 0.9rem;">
+                    <a href="jpm.pdf" target="_blank" class="cert-link">
                         <i class="fas fa-file-pdf"></i> View Certificate
                     </a>
                 </div>
@@ -70,8 +67,7 @@
                     <span class="company">Deloitte</span>
                     <span class="date">Oct 2025</span>
                     <p>Analyzed web activity logs to identify suspicious user behavior. Supported a client during a cybersecurity breach simulation, focusing on data security and log analysis.</p>
-                    
-                    <a href="deloitte.pdf" target="_blank" style="display: inline-block; margin-top: 10px; color: #64ffda; font-weight: bold; font-size: 0.9rem;">
+                    <a href="deloitte.pdf" target="_blank" class="cert-link">
                         <i class="fas fa-file-pdf"></i> View Certificate
                     </a>
                 </div>
@@ -87,17 +83,19 @@
             </div>
         </div>
     </section>
-    <section id="projects" class="section">
+
+    <section id="projects" class="section hidden">
         <h2 class="section-heading"><span class="num">02.</span> Featured Projects</h2>
         <div class="project-container">
             
             <div class="project-card">
+                <div class="project-media">
+                    <div class="media-placeholder">Demo GIF Space</div>
+                </div>
                 <div class="project-content">
                     <p class="project-overline">Android App Prototype</p>
                     <h3 class="project-title">CrowdSense</h3>
-                    <div class="project-desc">
-                        <p>A smart rush-management system for Mumbai local trains. It uses real-time data to help commuters plan safer, less crowded journeys.</p>
-                    </div>
+                    <p class="project-desc">A smart rush-management system for Mumbai local trains. It uses real-time data to help commuters plan safer, less crowded journeys.</p>
                     <ul class="project-tech-list">
                         <li>UI/UX Design</li>
                         <li>Prototyping</li>
@@ -106,32 +104,34 @@
                 </div>
             </div>
 
-            <div class="project-card">
+            <div class="project-card reverse">
                 <div class="project-content">
                     <p class="project-overline">Unity 2D Game</p>
                     <h3 class="project-title">Flappy Bird Clone</h3>
-                    <div class="project-desc">
-                        <p>A complete recreation of the classic game using Unity Engine. Implemented custom C# physics for gravity, collision detection, and score management.</p>
-                    </div>
+                    <p class="project-desc">A complete recreation of the classic game using Unity Engine. Implemented custom C# physics for gravity, collision detection, and score management.</p>
                     <ul class="project-tech-list">
                         <li>Unity Engine</li>
                         <li>C# Scripting</li>
                         <li>Game Physics</li>
                     </ul>
                 </div>
+                <div class="project-media">
+                    <div class="media-placeholder">Demo GIF Space</div>
+                </div>
             </div>
 
             <div class="project-card">
+                <div class="project-media">
+                    <div class="media-placeholder">Console Output Image</div>
+                </div>
                 <div class="project-content">
                     <p class="project-overline">Automation Tool</p>
                     <h3 class="project-title">Mark Sheet Generator</h3>
-                    <div class="project-desc">
-                        <p>An algorithmic tool developed to automate the grading process. It processes student scores and formats official mark sheets instantly.</p>
-                    </div>
+                    <p class="project-desc">An algorithmic tool developed to automate the grading process. It processes student scores and formats official mark sheets instantly.</p>
                     <ul class="project-tech-list">
-                        
                         <li>File Handling</li>
                         <li>Algorithms</li>
+                        <li>C Language</li>
                     </ul>
                 </div>
             </div>
@@ -139,30 +139,73 @@
         </div>
     </section>
 
-    <section id="hackathons" class="section">
+    <section id="hackathons" class="section bg-alt hidden">
         <h2 class="section-heading"><span class="num">03.</span> Hackathons & Events</h2>
         <div class="hackathon-grid">
             <div class="hack-card">
-                <h3>Coming Soon...</h3>
-                
+                <div class="hack-banner" style="background: linear-gradient(135deg, #112240, #233554);">
+                    <i class="fas fa-laptop-code banner-icon"></i>
+                </div>
+                <div class="hack-info">
+                    <h3>Smart India Hackathon</h3>
+                    <p class="hack-date">Targeting 2026</p>
+                    <p>Preparing to build tech solutions for open innovation problem statements.</p>
+                </div>
+            </div>
+            <div class="hack-card">
+                <div class="hack-banner" style="background: linear-gradient(135deg, #112240, #233554);">
+                    <i class="fas fa-gamepad banner-icon"></i>
+                </div>
+                <div class="hack-info">
+                    <h3>Game Jam</h3>
+                    <p class="hack-date">Upcoming</p>
+                    <p>Planning to prototype a complete 2D platformer in Unity within 48 hours.</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <footer id="contact">
-        <h3>What's Next?</h3>
-        <p>I am currently looking for internships and new opportunities.</p>
-        <a href="mailto:225aditya0119@gmail.com" class="btn primary">Say Hello</a>
-        <div class="socials">
-            <a href="https://github.com/aditya-gitzy"><i class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/aditya-lande-08348b387?utm_source=share_via&utm_content=profile&utm_medium=member_android"><i class="fab fa-linkedin"></i></a>
-            <a href="https://www.instagram.com/_aditya_dark_897_?utm_source=qr"><i class="fab fa-instagram"></i></a>
+    <section id="contact" class="section hidden">
+        <h2 class="section-heading"><span class="num">04.</span> Let's Connect</h2>
+        <div class="contact-wrapper">
+            <div class="contact-text">
+                <p>I'm currently looking for internships and new opportunities. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
+                <div class="social-grid">
+                    <a href="https://github.com/aditya-gitzy" class="social-item" target="_blank">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://www.linkedin.com/in/aditya-lande-08348b387/" class="social-item" target="_blank">
+                        <i class="fab fa-linkedin"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="https://www.instagram.com/_aditya_dark_897_/" class="social-item" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                        <span>Instagram</span>
+                    </a>
+                </div>
+            </div>
+            
+            <form id="contactForm" class="contact-form">
+                <div class="form-group">
+                    <input type="text" id="name" required placeholder="Your Name">
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" required placeholder="Your Email">
+                </div>
+                <div class="form-group">
+                    <textarea id="message" rows="5" required placeholder="Your Message"></textarea>
+                </div>
+                <button type="submit" class="btn primary submit-btn">Send Message</button>
+                <p id="form-status" class="form-status"></p>
+            </form>
         </div>
-        <p class="copyright">Built by Aditya.</p>
+    </section>
+
+    <footer>
+        <p class="copyright">Designed & Built by Aditya.</p>
     </footer>
 
     <script src="script.js"></script>
 </body>
 </html>
-
-
